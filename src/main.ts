@@ -40,7 +40,7 @@ const run = async () => {
         For the docker run command, we are doing the following
         - Set the working directory for docker continer
         - volume mount the GITHUB_WORKSPACE env variable (path where users checkout code is present) to work directory of container
-        - voulme mount .azure session token file between host and container,
+        - volume mount .azure session token file between host and container,
         - volume mount temp directory between host and container, inline script file is created in temp directory
         */
         let command: string = `run --workdir ${CONTAINER_WORKSPACE} -v ${process.env.GITHUB_WORKSPACE}:${CONTAINER_WORKSPACE} `;
